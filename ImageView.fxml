@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.control.*?>
@@ -7,18 +8,77 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="216.0" prefWidth="246.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ImageViewDemoController">
+<AnchorPane id="AnchorPane" maxHeight="700.0" maxWidth="800.0" minHeight="650.0" minWidth="800.0" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ImageViewController">
   <children>
-    <ImageView fx:id="myImage" fitHeight="150.0" fitWidth="200.0" layoutX="24.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+    <ImageView fx:id="myImage" fitHeight="300.0" fitWidth="300.0" layoutX="250.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
       <image>
         <Image url="@Dog.jpg" />
       </image>
     </ImageView>
-    <RadioButton fx:id="dogRadioButton" layoutX="73.0" layoutY="184.0" mnemonicParsing="false" onAction="#dogRadioButtonListener" selected="true" text="Dog">
-      <toggleGroup>
-        <ToggleGroup fx:id="myToggleGroup" />
-      </toggleGroup>
-    </RadioButton>
-    <RadioButton fx:id="catRadioButton" layoutX="131.0" layoutY="184.0" mnemonicParsing="false" onAction="#catRadioButtonListener" text="Cat" toggleGroup="$myToggleGroup" />
+	<Button layoutX="154.0" layoutY="646.0" onAction="#rotateButtonListener" text="Rotate">
+         <font>
+            <Font size="13.0" />
+         </font></Button>  
+	<Button layoutX="250.0" layoutY="646.0" onAction="#zoomInButtonListener" text="+">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+	<Button layoutX="283.0" layoutY="646.0" onAction="#zoomOutButtonListener" text="-">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+	<Button layoutX="25.0" layoutY="646.0" onAction="#previousButtonListener" text="&lt; &lt;">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+	<Button layoutX="81.0" layoutY="646.0" onAction="#nextButtonListener" text="&gt; &gt;">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+	<Button layoutX="336.0" layoutY="646.0" onAction="#contrastAddingButtonListener" text="+">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+    <Button layoutX="366.0" layoutY="646.0" onAction="#contrastReducingButtonListener" text="-">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+	<Button layoutX="710.0" layoutY="646.0" onAction="#resetButtonListener" text="Reset">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+    <Button layoutX="420.0" layoutY="646.0" onAction="#brightnessAddingButtonListener" text="+">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+    <Button layoutX="454.0" layoutY="646.0" onAction="#brightnessReducingButtonListener" text="-">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+    <Button layoutX="512.0" layoutY="646.0" onAction="#saturationAddingButtonListener" text="+">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+    <Button layoutX="543.0" layoutY="646.0" onAction="#saturationReducingButtonListener" text="-">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+    <Button layoutX="611.0" layoutY="646.0" onAction="#SepiaTone" text="SepiaTone">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+    <Button layoutX="20.0" layoutY="14.0" onAction="#openFile" text="Open">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+    <Button layoutX="80.0" layoutY="14.0" onAction="#saveFile" text="Save">
+     <font>
+            <Font size="13.0" />
+         </font></Button>
+    <Label layoutX="261.0" layoutY="621.0" text="Zoom" />
+    <Label layoutX="341.0" layoutY="621.0" prefHeight="17.0" prefWidth="45.0" text="Contrast" />
+    <Label layoutX="419.0" layoutY="621.0" text="Brightness" />
+    <Label layoutX="512.0" layoutY="621.0" text="Saturation" />
+	
   </children>
 </AnchorPane>
