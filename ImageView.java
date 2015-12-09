@@ -9,14 +9,14 @@ public class ImageView extends Application
    public void start(Stage stage) throws Exception
    {  
       // Load the FXML file.
-      Parent parent = FXMLLoader.load(
-               getClass().getResource("ImageViewDemo.fxml")); 
+      Parent root = FXMLLoader.load(
+               getClass().getResource("FXMLChooseAlbum.fxml")); 
       
       // Build the scene graph.
-      Scene scene = new Scene(parent); 
+      Scene scene = new Scene(root); 
       
       // Display our window, using the scene graph.
-      stage.setTitle("ImageViewDemo"); 
+      stage.setTitle("ImageViewer"); 
       stage.setScene(scene);
       stage.show(); 
    }
